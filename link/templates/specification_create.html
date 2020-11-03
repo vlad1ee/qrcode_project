@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Тех-задание</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+		
+				
+
+			<!-- Banner -->
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												
+												<img src="{% static 'img/logo.png' %}" style="display: inline; width: 100px;">
+
+
+											
+												
+												<p style="display: inline; float: right; font-size: 18px;"></p><br><br><br>
+												<a href="{% url 'index' %}" style="color: black; font-size: 14px; text-decoration: none;"><span style="padding-right: 10px;">&larr;</span>Назад</a>
+												<p style="text-align: center; font-weight: bold;">Напишите тех-задание</p>
+											
+											
+											</header>
+<p>Напишите ваше тех-задание, мы свяжемся с вами, и дадим данные для входа в ЛК.
+В ЛК вы можете ознакомиться с процессом работы и увидеть ваш проект!
+(Постарайтесь описать тех-задание максимально подробно)</p>
+
+	<form method="post" enctype=multipart/form-data> {% csrf_token %}
+		<input type="file" name="document" style="margin-top: 20px"><br>
+		<input type="text" name="full_name" placeholder="ФИО" style="width: 100%; border-radius: 5px; margin-top: 20px"><br>
+		<input type="text" name="company_name" placeholder="Название вашей компании" style="width: 100%; border-radius: 5px;"><br>
+		<input type="text" name="company_description" placeholder="Краткое описание вашей компании" style="width: 100%; border-radius: 5px;"><br>
+		<textarea type="text" name="description" placeholder="Тех-задание" style="width: 100%; border-radius: 5px;"></textarea><br>
+		<input type="text" name="deadline" placeholder="Срок" style="width: 100%; border-radius: 5px;"><br>
+		<input type="email" name="email" placeholder="Почта" style="width: 100%; border-radius: 5px;"><br>
+		<input type="text" name="phone" placeholder="Номер телефона" style="width: 100%; border-radius: 5px;"><br>
+		<center><button type="submit" style="margin-top: 30px;"> Отправить</button></center>
+	</form>
+
+
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+							
+			    <center><footer style="margin-top: -30px; margin-left: auto;margin-right: auto;">
+        <div class="col-4 col-12-medium">
+        <div class="container">
+            <div class="row">
+        <center><h1>Новая Норма</h1>
+        <p>Компания является интегратором и провайдером облачных сервисов для автоматизации процессов управления цепочками поставок и взаиморасчетов. Важным направлением работы компании является участие в строительстве цифровой ЭКО-системы.</p>
+
+       
+            <h1>Контакты</h1>
+            <a href="tel:+996312888882" style="color: black;">+996 (312) 88-88-82</a><br>
+           <a href="tel:+996(501)588882" style="color: black;">+996 (501) 588-882</a>
+           </center>
+           
+
+    </div>
+</div>
+</div>
+    </footer>
+</center>
+
+		<!-- Scripts -->
+
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<!-- <script src="assets/js/main.js"></script> -->
+
+	</body>
+</html>

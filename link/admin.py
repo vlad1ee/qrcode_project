@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from link.models import Specification
+
+
+admin.site.register(Specification)
