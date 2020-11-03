@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import index, edo, ofd, mark, SpecificationCreateView
 
 
 urlpatterns = [
@@ -7,4 +7,6 @@ urlpatterns = [
     path('edo/', edo, name='edo'),
     path('ofd/', ofd, name='ofd'),
     path('mark/', mark, name='mark'),
+    path('specification/', SpecificationCreateView.as_view(),
+         name='specification_create'),
 ]
